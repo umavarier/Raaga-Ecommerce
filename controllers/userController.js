@@ -11,9 +11,6 @@ const PDFDocument = require('pdfkit');
 const RazorPay = require('razorpay');
 require('dotenv').config();
 
-require('dotenv').config();
-
-
 const loadHome = async (req, res, next) => {
     try {
         const product = await products.find({ isAvailable: 1 });
