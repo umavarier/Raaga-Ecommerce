@@ -10,6 +10,8 @@ const banner = require("../models/bannerModel");
 const RazorPay = require('razorpay');
 const PDFDocument = require('pdfkit');
 
+require('dotenv').config();
+
 
 const loadHome = async (req, res, next) => {
     try {
