@@ -7,8 +7,9 @@ const address = require("../models/addressModel");
 const order = require("../models/orderModel");
 const coupon = require("../models/couponModel");
 const banner = require("../models/bannerModel");
-const RazorPay = require('razorpay');
 const PDFDocument = require('pdfkit');
+const RazorPay = require('razorpay');
+require('dotenv').config();
 
 require('dotenv').config();
 
@@ -429,7 +430,7 @@ const placeOrder = async (req, res, next) => {
         else {
             var instance = new RazorPay({
                 key_id: process.env.key_id,
-                key_secret: process.env.key_secret
+                key_secret: process.env.key_secret,
             })
             let razorpayOrder = await instance.orders.create({
                 amount: req.body.cost * 100,
