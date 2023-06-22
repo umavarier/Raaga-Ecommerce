@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Ashion Template">
+    <meta name="keywords" content="Ashion, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Raaga</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=FontName">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="/assets/css/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="/assets/css/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="/assets/css/css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="/assets/css/css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="/assets/css/css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="/assets/css/css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="/assets/css/css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="/assets/css/css/style.css" type="text/css">
+    <link rel="stylesheet" href="/assets/css/css/style.css">
+
+</head>
+
+<body >
+    <!-- Page Preloder -->
+    <!-- <div id="preloder">
+        <div class="loader"></div>
+    </div> -->
+    <style>
+        @font-face {
+            font-family: 'Beau Rivage';
+            src: url('fonts/beau-rivage.ttf') format('truetype');
+            /* Add additional src lines for other font formats if available */
+        }
+    </style>
+
+    <!-- Offcanvas Menu Begin -->
+    <div class="offcanvas-menu-overlay"></div>
+    <div class="offcanvas-menu-wrapper">
+        <div class="offcanvas__close">+</div>
+        <ul class="offcanvas__widget">
+            <li><span class="icon_search search-switch"></span></li>
+            <li><a href="#"><span class="icon_heart_alt"></span>
+                    <div class="tip"></div>
+                </a></li>
+            <li><a href="#"><span class="icon_bag_alt"></span>
+                    <div class="tip"></div>
+                </a></li>
+        </ul>
+        <div class="offcanvas__logo">
+            <!-- <a href="./index.html"><img src="img/logo.png" alt=""></a> -->
+            <a href="/">                
+                <h2 class="beau" style="font-family: 'Beau Rivage', cursive; color: rgb(7, 15, 66)">Raaga
+            </h2></a>
+        </div>
+        <div id="mobile-menu-wrap"></div>
+        <div class="offcanvas__auth">
+            <a href="#">Login</a>
+            <a href="#">Register</a>
+        </div>
+    </div>
+    <!-- Offcanvas Menu End -->
+
+    <!-- Header Section Begin -->
+    <header class="header" style="background-color: black;">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xl-3 col-lg-2">
+                    <div class="header__logo"><a href="/">
+                        <h2 class="beau" style=" font-family: 'Beau Rivage', cursive; color : white" >Raaga</h2>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-xl-8 col-lg-7" >
+                    <nav class="header__menu">
+                        <ul>
+                            <% if(user) { %>
+                                <li class="nav-item">
+                                    <input type="text" class="form-control" placeholder="Search" name="search"
+                                        id="search" onkeyup="update()">
+                            </li>
+
+                                <li class="nav-item">
+                                    <a style="color: white;" class="nav-link" href="/home">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a style="color: white;" class="nav-link" href="/loadShop">Shop</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a style="color: white;" class="nav-link" href="/loadCart">Cart</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a style="color: white;" class="nav-link" href="/wishlist">wishlist</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a style="color: white;" class="nav-link" href="/userProfile">Profile</a>
+                                </li>
+                                
+                                
+                                <li class="nav-item">
+                                    <a style="color: rgb(250, 8, 8);" class="nav-link" href="/logout">Logout</a>
+                                </li>
+                                <% } else { %>
+                                    <li class="mr-6"></li>
+                                    <li class="mr-6"></li>
+                                    <li class="nav-item">
+                                        <input type="text" class="form-control" placeholder="Search" name="search"
+                                            id="search" onkeyup="update()">
+                                    </li>
+                                    <li class="nav-item">
+                                        <a style="color: white;" class="nav-link" href="/">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a style="color: white;" class="nav-link" href="/loadShop">Shop</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a style="color: white;" class="nav-link" href="/login">Cart</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a style="color: white;" class="nav-link" href="/login">Login</a>
+                                    </li>
+                                   
+                                                                        
+                                    <% }%>
+                        </ul>
+                    </nav>
+                </div>
+
+            </div>
+
+        </div>
+        </div>
+        </div>
+        <div class="canvas__open">
+            <i class="fas fa-bars"></i>
+        </div>
+        </div>
+    </header>
+
+    <!-- Header Section End -->
