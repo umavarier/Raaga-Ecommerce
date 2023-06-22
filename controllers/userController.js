@@ -9,6 +9,7 @@ const coupon = require("../models/couponModel");
 const banner = require("../models/bannerModel");
 const RazorPay = require('razorpay');
 const PDFDocument = require('pdfkit');
+require('dotenv').config();
 
 
 const loadHome = async (req, res, next) => {
@@ -402,8 +403,8 @@ const placeOrder = async (req, res, next) => {
                 res.render("orderSuccess", { user: req.session.user })
             } else {
                 var instance = new RazorPay({
-                    key_id: process.env.key_id,
-                    key_secret: process.env.key_secret
+                    key_id: process.env.KEY_ID,
+                    key_secret: process.env.KEY_SECRET
                 })
                 let razorpayOrder = await instance.orders.create({
                     amount: req.body.cost * 100,
@@ -426,8 +427,8 @@ const placeOrder = async (req, res, next) => {
         }
         else {
             var instance = new RazorPay({
-                key_id: process.env.key_id,
-                key_secret: process.env.key_secret
+                key_id: process.env.KEY_ID,
+                key_secret: process.env.KEY_SECRET,
             })
             let razorpayOrder = await instance.orders.create({
                 amount: req.body.cost * 100,
@@ -453,7 +454,7 @@ const placeOrder = async (req, res, next) => {
                 order_id: razorpayOrder.id,
                 total: req.body.amount,
                 session: req.session,
-                key_id: process.env.key_id,
+                key_id: process.env.KEY_ID,
                 user: userData,
                 orders: Norder,
                 orderId: Norder._id.toString(),
